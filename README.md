@@ -45,7 +45,7 @@ ls -l
 #### Install the `Red Hat OpenShift GitOps` operator
 ```
 cd multi-tenancy-gitops
-oc apply -f setup/ocp47
+oc apply -f setup/ocp4x
 ```
 
 The response confirms that the below resources has been created:
@@ -62,7 +62,7 @@ Screenshot of operator
 Instead of using the default ArgoCD from the `Red Hat OpenShift GitOps` operator we want to manage if via GitOps. We will delete it so we can apply our customized ArgoCD.
 ```
 oc delete gitopsservice cluster -n openshift-gitops || true
-oc apply -f setup/ocp47/argocd-instance/ -n openshift-gitops
+oc apply -f setup/ocp4x/argocd-instance/ -n openshift-gitops
 ```
 
 #### Launch and login to ArgoCD
